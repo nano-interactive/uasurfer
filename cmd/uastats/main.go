@@ -8,7 +8,7 @@ import (
 	"sort"
 	"text/tabwriter"
 
-	"github.com/avct/uasurfer"
+	"github.com/nano-interactive/uasurfer"
 )
 
 func main() {
@@ -32,7 +32,7 @@ func main() {
 	if err := scanner.Err(); err != nil {
 		fmt.Fprintln(os.Stderr, "reading standard input:", err)
 	}
-	fmt.Printf("Read %d useragents\n", count)
+	fmt.Printf("Read %d User-Agents\n", count)
 	fmt.Println()
 	stats.Summary(count, os.Stdout)
 }
