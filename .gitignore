@@ -1,7 +1,6 @@
 # Compiled bin #
 ###################
 
-
 # Compiled source #
 ###################
 *.dll
@@ -54,3 +53,4 @@ Thumbs.db
 # Dev Tools #
 ######################
 .vagrant
+coverage.txt
