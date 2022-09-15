@@ -37,3 +37,11 @@ jobs:
             ${{ runner.os }}-go-
       - name: Test ${{ matrix.go }}
         run: go test -v -race -covermode=atomic -coverprofile=coverage.txt -timeout 5m ./...
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage.txt
+          flags: tests
+          name: codecov-umbrella
+          fail_ci_if_error: true
+          verbose: true
